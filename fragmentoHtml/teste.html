@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando fragmento de HTML</title>
+</head>
+<body>
+
+</body>
+<script>
+    // artigo 
+    const article = {
+        title : 'Aprendendo templates strings',
+        intro : 'Uma breve explicacao de como utilizar template string do ES6 em seu codigo hoje!',
+        body : 'e os guri, nao vou escrever tudo n slc',
+        tags : ['es6','js','template-literal'],
+        author : 'malu'
+    };
+
+    function renderAuthor(name) {
+        return (name) ? name : 'desconhecido'
+    }
+
+    // marcacao
+    const markup = `
+        <article>
+            <header>
+                <h1>${article.title}</h1>
+            </header>
+            <section>
+                <p>${article.intro}</p>
+            </section>
+            <footer>
+                <ul>
+                    ${article.tags.map((tag) =>  `<li>${tag}</li>`).join('')}
+                </ul>
+                <p>Author: ${renderAuthor(article.author)}</p>
+            </footer>
+        </article>
+    `;
+
+    document.body.innerHTML = markup;
+
+</script>
+</html>

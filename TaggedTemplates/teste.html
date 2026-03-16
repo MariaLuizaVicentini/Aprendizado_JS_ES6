@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged Templates</title>
+</head>
+<style>
+    .green {
+        color: green;
+        font-size: 25px;
+    }
+</style>
+<body>
+</body>
+<script>
+    const cidade = 'Campinas';
+    const nome = 'Malu';
+    const idade = '22 anos de idade';
+
+    function green(template, ...values) {
+        return template.reduce((acumulator, part, i) => {
+            return `
+            ${acumulator}
+            <span class="green">${values[i - 1].toUpperCase()}</span>
+            ${part}
+            `
+        })
+    }
+    
+    const paragrafo = green`Eu moro em ${cidade} e me chamo ${nome} atualmente tenho ${idade}`
+
+    document.body.innerHTML = paragrafo;
+</script>
+</html>

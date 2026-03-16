@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metódos strings - startsWith, endsWith, includes</title>
+</head>
+<body>
+</body>
+<script>
+    //--- todos os retornos sao booleanos ---//
+
+    let text = 'gurizao! ';
+
+    // comeca com 
+    const startsWith = text.startsWith('izao', 3);
+    // termina com 
+    const endsWith = text.endsWith('gurizao!', 8);
+    //  repete a string conforme valor definido
+    const repeatText = text.repeat(5);
+    // busca a substring dentro da string
+    const substring = text.includes('!');
+
+    console.log(substring);
+
+    
+
+</script>
+</html>

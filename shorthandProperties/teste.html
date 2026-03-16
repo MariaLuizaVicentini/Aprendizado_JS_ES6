@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthand Properties</title>
+</head>
+<body>
+</body>
+<script>
+    let nome = 'Malu';
+    let sobrenome = 'Vicentini';
+    let idade = 21;
+
+    // const pessoa = {
+    //     nome: nome, 
+    //     sobrenome: sobrenome, 
+    //     idade: idade, 
+        
+    //     hello: function () {
+    //         console.log('Function: antiga do JS')
+    //     }
+    // };
+
+    // SHORTHAND
+    const pessoa = {
+        nome, 
+        sobrenome, 
+        idade, 
+        
+        hello () {
+            console.log('Function: nova do JS ES6')
+        }
+    };
+    pessoa.hello();
+    console.log(pessoa);
+    
+
+    
+</script>
+</html>

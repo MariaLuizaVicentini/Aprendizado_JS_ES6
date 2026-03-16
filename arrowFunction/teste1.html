@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        const cidades = ['campinas','itatiba','vinhedo'];
+
+        const saoPaulo = cidades.map(function(name) {
+            return `antigo: Eu ja visitei ${name}!`;
+        });
+        
+        const saoPauloArrow = cidades.map((name) => {
+            return `Arrow: Eu ja visitei ${name}!`;
+        });
+
+        const saoPauloArrowSingle = cidades.map(name => {
+            return `Single: Eu ja visitei ${name}!`;
+        });
+
+        const saoPauloArrowOneline = cidades.map(name => `Oneline: Eu ja visitei ${name}!`);
+
+        const saoPauloChain = cidades
+                                    .filter(name => name === "vinhedo")
+                                    .map(name => `Chain: Eu ja visitei ${name}!`);
+
+        console.log(saoPaulo);
+        console.log(saoPauloArrow);
+        console.log(saoPauloArrowSingle);
+        console.log(saoPauloArrowOneline);
+        console.log(saoPauloChain);
+    </script>
+    
+</body>
+</html>
