@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.find</title>
+</head>
+<body>
+</body>
+<script>
+    const data = [
+        {
+            name: 'malu',
+            idade: 22,
+            cidade: 'campinas'
+        },
+        {
+            name: 'joao',
+            idade: 21,
+            cidade: 'vinhedo'
+        },
+    ];
+
+    const amostraDeArray = [4, -5, 0, -1];
+    const abaixoDeZero = amostraDeArray.find(i => i < 0);
+    // console.log(abaixoDeZero);
+    const abaixoDeZeroIndex= amostraDeArray.findIndex(i => i < 0);
+    console.log(abaixoDeZeroIndex);
+
+</script>
+</html>
