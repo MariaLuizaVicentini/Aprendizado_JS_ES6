@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Swap Variables</title>
+</head>
+<body>
+</body>
+<script>
+    // jeito novo 
+
+    let a = 42;
+    let b = 21;
+
+    // console.log("Valor de {a}: ", a);
+    // console.log("Valor de {b}: ", b);
+
+    [a, b] = [b, a];
+
+    // console.log("Valor de {a}: ", a);
+    // console.log("Valor de {b}: ", b);
+
+
+    //----------------------------------//
+
+    // jeito antigo
+
+    let a_new = 42;
+    let b_new = 21;
+
+    // 3 linhas que poderiam ser 1, com '[a, b] = [b, a]'
+    varTemp = a;
+    a = b;
+    b = temp;
+
+    console.log("Valor de {a}: ", a_new);
+    console.log("Valor de {b}: ", b_new);
+
+
+
+</script>
+</html>
