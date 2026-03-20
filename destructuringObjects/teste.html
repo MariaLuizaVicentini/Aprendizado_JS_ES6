@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao destructuring</title>
+</head>
+<body>
+</body>
+<script>
+    var data = {
+        nome: 'malu',
+        sobrenome: 'vicentini',
+        idade: 22,
+        blog: 'https://maluvicentini.onrender.com',
+        social: {
+            linkedin: 'link: https://www.linkedin.com/in/malu-vicentini-5b8181201'
+        }
+    };
+
+     
+    // jeito antigo
+    const apelido = data.nome;
+    const idade = data.idade;
+    const links = data.social.linkedin;
+
+    // jeito novo
+    const { nome, sobrenome } = data;
+
+    // console.log(nome);
+    // console.log(idade);
+    // console.log(sobrenome);
+
+    const { linkedin: ld } = data.social;    
+    // console.log(ld);
+
+
+    //--- Inserindo valor padrao da variavel ---//
+    const { cidade = 'Campinas' } = data.social;
+    console.log(cidade);
+    
+
+</script>
+</html>
