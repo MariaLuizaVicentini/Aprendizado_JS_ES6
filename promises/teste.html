@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+</body>
+<script>
+    // obj com uma acao que ainda nao foi finalizada, mas que tem como no futuro ser finalizada de alguma forma
+    // tipo uma promesa, eu ainda n fiz mas vou fazer alguam coisa
+
+    var defer = new Promise((resolve, reject) => {
+        // demora 2s para retornar uma resposta
+        setTimeout(() => {
+            if (true) {
+                resolve('Eai meu cupixa!');
+            } else {
+                reject('Erro! Deu merda');
+            }
+        }, 2000);    
+    });
+
+    defer
+        .then((data) => {
+            console.log(data);
+            return 'foo';
+        })
+        .then((data => console.log(data)))
+        .catch((error) => console.log(error));
+
+</script>
+</html>
