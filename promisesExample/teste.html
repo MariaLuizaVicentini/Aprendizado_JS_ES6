@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises Example</title>
+</head>
+<body>
+</body>
+<script>
+    var posts = fetch('https://jsonplaceholder.typicode.com/posts');
+
+    posts
+        .then(data => data.json())
+        .then(data => data.map(post => {
+            console.log(post.title);
+        }))
+        .catch(err => console.log(err));
+</script>
+</html>
