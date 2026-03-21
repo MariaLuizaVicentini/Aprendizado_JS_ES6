@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heranca Prototipal Prototypes</title>
+</head>
+<body>
+</body>
+<script>
+    function Animal(tipo, som) {
+        this.tipo = tipo;
+        this.som = som;
+    }
+
+    const cachorro = new Animal('cachorro', 'au au');
+
+    const { tipo, som } = cachorro;
+    console.log(`O Animal é: ${tipo}`);
+    console.log(`Seu som é: ${som}`);
+
+</script>
+</html>
