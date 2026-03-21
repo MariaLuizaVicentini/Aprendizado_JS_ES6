@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises Multiplas</title>
+</head>
+<body>
+</body>
+<script>
+    const moeda = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ moeda: 'euro', value: 3.50 });
+        }, 2000);
+    });
+
+    const paises = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(['brasil', 'irlanda', 'japao']);
+        }, 600);
+    });
+
+    // Promise
+    //     .all([moeda, paises])
+    //     .then(responses => {
+    //         console.log(responses);
+    //     })
+
+    // quando a primeira promise for resolvida, ignora todo o resto
+    Promise
+        .race([moeda, paises])
+        .then(responses => {
+            console.log(responses);
+        })
+
+</script>
+</html>
