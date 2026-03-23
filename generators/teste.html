@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators Intro</title>
+</head>
+<body>
+</body>
+<script>
+    // function nomesGenericos () {
+    //     console.log('willian');
+    //     console.log('malu');
+    //     console.log('gabriel');
+    // }
+    // nomesGenericos();
+
+    function* nomesGenericos () {
+        console.log('Chamando o primeiro nome');
+        yield('willian');
+        console.log('Chamando o segundo nome');
+        yield('malu');
+        console.log('Chamando o terceiro nome');
+        yield('gabriel');
+    }
+
+    const nomes = nomesGenericos();
+    
+    console.log(nomes.next());
+    console.log(nomes.next());
+    console.log(nomes.next());
+
+</script>
+</html>
