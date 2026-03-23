@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets Intro</title>
+</head>
+<body>
+</body>
+<script>
+    let conjunto = new Set(['willian','malu','jonas']);
+
+    conjunto.add('jabiraca');
+    conjunto.delete('willian');
+    // existe tal elemento
+    console.log(conjunto.has('willian'));
+    console.log(conjunto.has('malu'));
+
+    let it = conjunto.values();
+
+    
+
+    for (nome of it) {
+        console.log(nome);
+    }
+
+
+</script>
+</html>
