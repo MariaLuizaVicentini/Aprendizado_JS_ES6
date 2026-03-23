@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisao Heranca Prototipal</title>
+</head>
+<body>
+</body>
+<script>
+
+    function Animal(tipo, som) {
+        this.tipo = tipo;
+        this.som = som;
+    }
+
+    Animal.prototype.saudacao = function() {
+        console.log(`Esse é meu som: ${this.som}, eu sou o(a): ${this.tipo}`);
+    }
+
+    const cachorro = new Animal('cachorro','au au!');
+    const gato = new Animal('gato','miau miau!');
+    
+    
+</script>
+</html>
