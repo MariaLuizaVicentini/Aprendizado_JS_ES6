@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxies Intro</title>
+</head>
+<body>
+</body>
+<script>
+    let objeto = {
+        nome: 'malu',
+        idade: 22
+    }
+
+    let proxy = new Proxy(objeto, {
+        get(target, nome) {
+            console.log('Alguém está pedindo o nome');
+            return target[nome];
+        },
+        set(target, nome, value) {
+            console.log('Alguém está mudando o nome!');
+            target[nome] = value;
+        }
+    });
+
+
+</script>
+</html>
