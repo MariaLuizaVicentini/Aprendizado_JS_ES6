@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.prototype.includes</title>
+</head>
+<body>
+
+<script>
+
+    //------Jeito antigo-----//
+    // function getNum(num) {
+    //     const listaNum = [1, 2, 3];
+    //     //forma antiga de buscar um valor dentro de uma lista
+    //     console.log(listaNum.indexOf(num) > -1);
+    // }
+    // getNum(3);
+
+    //------Jeito novo-----//
+    function getNumIncludes(num) {
+        const listaNum = [1, 2, 3];
+        //forma antiga de buscar um valor dentro de uma lista
+        console.log(listaNum.includes(num));
+    }
+    getNumIncludes(3);
+
+
+</script>
+
+</body>
+</html>
