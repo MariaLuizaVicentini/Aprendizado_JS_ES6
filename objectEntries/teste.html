@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Entries</title>
+</head>
+<body>
+</body>
+<script>
+
+    const animais = {
+        leao: 3,
+        pato: 2,
+        tubarao: 5
+    };
+
+    // console.log(Object.entries(animais));
+
+    const animalMap = new Map(Object.entries(animais));
+
+    console.log(animalMap.size);
+    console.log(animalMap.has('leao'));
+    console.log(animalMap.has('carneiro'));
+    console.log(animalMap.get('camelo'));
+
+
+</script>
+</html>
