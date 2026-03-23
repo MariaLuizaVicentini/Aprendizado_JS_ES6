@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Classes</title>
+</head>
+<body>
+</body>
+<script>
+
+    class Animal {
+        constructor(tipo, som) {
+            this.tipo = tipo;
+            this.som = som;
+        }
+
+        saudacao() {
+            console.log(`Esse é meu som: ${this.som}, eu sou o(a): ${this.tipo}`);
+        }
+
+        // metodos que ficam dentro da classe e nao vao pro objeto
+        static info() {
+            console.log('Metodo estatico: essa é uma aula sobre classes em JS');
+        }
+
+        get name() {
+            console.log(`metodo getter: ${this.som} meu nome é Jake`);
+        }
+
+        // metodo setter: serve pra inserir um valor ou propriedade ao objeto da classe
+        set apelido(nick) {
+            this.nick = nick;
+        }
+
+        
+
+    }
+
+    // Animal.prototype.saudacao = function() {
+    //     console.log(`Esse é meu som: ${this.som}, eu sou o(a): ${this.tipo}`);
+    // }
+
+    const cachorro = new Animal('cachorro','au au!');
+    const gato = new Animal('gato','miau miau!');
+    
+    
+</script>
+</html>
