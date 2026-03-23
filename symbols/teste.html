@@ -8,8 +8,11 @@
 <body>
 </body>
 <script>
-    let foo = Symbol('nome');
-    let bar = Symbol('nome');
+    let foo = Symbol('name');
+    let bar = Symbol('name');
+
+    console.log(foo);
+    console.log(bar);
 
     let obj = {
         [Symbol('nome')]: 'malu',

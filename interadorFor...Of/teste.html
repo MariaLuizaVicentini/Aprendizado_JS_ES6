@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for...of</title>
+</head>
+<body>
+</body>
+<script>
+    
+    // iteravel = 
+    var txt = 'campinas';
+    // iteradores = elemntos que eu posso iterar
+    var it = txt[Symbol.iterator]();
+
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // console.log(it.next() );
+    // // done: true
+    // console.log(it.next() );
+
+    // para cada letra do texto
+    for (letra of txt) {
+        console.log(letra);
+        if (letra === 'a') break;
+    }
+
+</script>
+</html>
